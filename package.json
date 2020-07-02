@@ -1,0 +1,23 @@
+{
+  "name": "impact-podcast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "scripts": {
+    "start": "(MODE=dev node build.js) & serve public -l 3000",
+    "build": "node build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "livereload": "^0.9.1",
+    "node-sass": "^4.14.1",
+    "pug": "^3.0.0",
+    "rollup": "^2.18.1",
+    "serve": "^11.3.2"
+  },
+  "devDependencies": {
+    "jstransformer-markdown-it": "^2.1.0"
+  }
+}
