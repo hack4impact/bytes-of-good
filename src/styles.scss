@@ -18,7 +18,7 @@
     url('fonts/VisbyCF-Normal.woff') format('woff');
 }
 
-$content-max-width: 1200px;
+$content-max-width: 1400px;
 $header-font: 'Visby CF', 'Open Sans', sans-serif;
 $body-font: 'Open Sans', sans-serif;
 $purple: #8600f0;
@@ -40,6 +40,7 @@ body {
   margin: 0;
   letter-spacing: 0.03em;
   color: $black;
+  font-size: 24px;
 }
 
 main {
@@ -58,8 +59,14 @@ h1 {
   margin-bottom: 50px;
 }
 
-h2 {
-  font-size: 60px;
+hgroup {
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 60px;
+    margin-top: 15px;
+  }
 }
 
 a,
@@ -79,9 +86,12 @@ button {
 section {
   max-width: $content-max-width;
   margin: auto;
+  margin-top: 80px;
   padding: 30px;
+  position: relative;
 
   &#home {
+    margin-top: 0;
     min-height: 70vh;
     color: white;
     display: flex;
@@ -109,6 +119,42 @@ section {
         &:hover {
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
           transform: translateY(-5px);
+        }
+      }
+    }
+  }
+
+  &#about {
+    h2 {
+      color: $purple;
+    }
+    h3.powers-combined-heading {
+      font-size: 44px;
+    }
+    img.people {
+      position: absolute;
+    }
+    .description-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 120px;
+
+      .description {
+        flex: 1;
+        min-width: 500px;
+        max-width: 580px;
+        display: flex;
+        align-items: center;
+        margin: 30px;
+
+        strong {
+          color: $purple;
+        }
+
+        img {
+          height: 150px;
+          margin-right: 30px;
         }
       }
     }
