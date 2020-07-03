@@ -1,5 +1,9 @@
+mixin vector(hexcode)
+  svg.section-bottom-vector(width="1442" height="100" viewBox="0 0 1442 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg")
+    path(d="M1441.5 0L0 99.5V0H1441.5Z" fill=hexcode)
+
 mixin section-bottom(color)
   if color === 'purple'
-    <svg class="section-bottom-vector" width="1442" height="100" viewBox="0 0 1442 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1441.5 0L0 99.5V0H1441.5Z" fill="#8600F0" />
-    </svg>
+    +vector('#8600F0')
+  else if color === 'white'
+    +vector('white')
