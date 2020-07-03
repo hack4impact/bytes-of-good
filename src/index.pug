@@ -7,17 +7,18 @@ html(lang="en-US")
 
   body
     main
+      include nav.pug
       h1 Very cool!
 
       p It works :)
 
-      section.about
+      section.about#about
         include about.pug
 
-      section.team
+      section.team#team
         include team.pug
 
-      section.contact
+      section.contact#contact
         include contact.pug
 
 script(src="not-a-react-bundle.js")
