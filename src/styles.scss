@@ -1,29 +1,117 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap');
+
+@font-face {
+  font-family: 'Visby CF';
+  font-display: swap;
+  font-weight: bold;
+  src: url('fonts/VisbyCF-Bold.woff2') format('woff2'),
+    url('fonts/VisbyCF-Bold.ttf') format('truetype'),
+    url('fonts/VisbyCF-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Visby CF';
+  font-display: swap;
+  font-weight: normal;
+  src: url('fonts/VisbyCF-Normal.woff2') format('woff2'),
+    url('fonts/VisbyCF-Normal.ttf') format('truetype'),
+    url('fonts/VisbyCF-Normal.woff') format('woff');
+}
 
 $content-max-width: 1200px;
+$header-font: 'Visby CF', 'Open Sans', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+$purple: #8600f0;
+$mint: #a1e4d4;
+$black: #171717;
 
 html {
   padding: 0;
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: $body-font;
   padding: 0;
   margin: 0;
+  color: $black;
+}
+
+main {
+  margin-top: 80px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $header-font;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+.purple-background {
+  background-color: $purple;
+}
+
+.section-bottom-vector {
+  width: 100%;
+  height: 8vw;
 }
 
 section {
   max-width: $content-max-width;
   margin: auto;
   padding: 30px;
+
+  &.home {
+    min-height: 70vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-content {
+      max-width: 600px;
+
+      p {
+        font-size: 30px;
+        margin-bottom: 45px;
+      }
+
+      .cta-link {
+        display: inline-block;
+        font-size: 28px;
+        color: $purple;
+        background: $mint;
+        font-family: $header-font;
+        font-weight: bold;
+        border-radius: 50px;
+        padding: 15px 50px;
+      }
+    }
+  }
 }
 
 nav {
-  background-color: #8600f0;
-  min-height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: $purple;
   font-size: 24px;
-  font-weight: 300;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
@@ -53,7 +141,7 @@ nav {
         text-decoration: none;
 
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           left: 0;
           bottom: 0;
@@ -74,32 +162,5 @@ nav {
         }
       }
     }
-  }
-}
-
-section.home {
-  min-height: 550px;
-  background-color: #8600f0;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
-  }
-
-  p {
-    font-size: 30px;
-    margin-bottom: 40px;
-  }
-
-  a {
-    font-size: 22px;
-    color: #8600f0;
-    background: #a1e4d4;
-    font-weight: bold;
-    border-radius: 50px;
-    padding: 15px 50px;
   }
 }
