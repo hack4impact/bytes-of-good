@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
 
 $content-max-width: 1200px;
 
@@ -6,12 +6,9 @@ html {
   padding: 0;
   margin: 0;
 }
-h1 {
-  color: red;
-}
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -19,6 +16,7 @@ body {
 section {
   max-width: $content-max-width;
   margin: auto;
+  padding: 30px;
 }
 
 nav {
@@ -42,7 +40,7 @@ nav {
     padding: 0;
 
     li {
-      padding-right: 60px;
+      margin: 0 30px;
 
       &:first-of-type {
         margin-right: auto;
@@ -55,7 +53,7 @@ nav {
         text-decoration: none;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           bottom: 0;
@@ -76,5 +74,32 @@ nav {
         }
       }
     }
+  }
+}
+
+section.home {
+  min-height: 550px;
+  background-color: #8600f0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  a {
+    font-size: 22px;
+    color: #8600f0;
+    background: #a1e4d4;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 15px 50px;
   }
 }
