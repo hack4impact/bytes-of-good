@@ -11,17 +11,17 @@ html(lang="en-US")
     main
       include nav.pug
 
-      include home.pug
+      include sections/home.pug
       +section-color-transition('purple-to-white')
 
-      include about.pug
+      include sections/about.pug
       +section-color-transition('white-to-mint')
 
-      include team.pug
+      include sections/team.pug
       +section-color-transition('mint-to-white')
 
       section.contact#contact
-        include contact.pug
+        include sections/contact.pug
       +section-color-transition('white-to-purple')
 
 script(src="not-a-react-bundle.js" defer)
