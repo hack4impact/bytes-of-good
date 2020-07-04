@@ -1,3 +1,5 @@
+include home-graphics.pug
+
 .purple-background
   section#home 
     .header-content
@@ -5,4 +7,8 @@
       p We’re starting a pod at the underserved intersection of tech and social good.
       a.cta-link Sign me up!
 
-    img(height=464 width=430 src="static/top-vector-art.jpg" alt="Woman with arms outstretched")
+    .header-graphic
+      +home-graphic
+      +home-graphic-accents('heart')
+      +home-graphic-accents('megaphone')
+      +home-graphic-accents('brush')
