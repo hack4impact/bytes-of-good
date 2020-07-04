@@ -9,20 +9,18 @@ const { rollup } = require('rollup')
 /* Configurable options */
 const liveReloadPort = 35729
 const scssFilePath = '/src/styles.scss'
+const rollupPlugins = []
 
 /* Helpers */
 const sassRender = promisify(sassCompiler.render)
 const writeFile = promisify(fs.writeFile)
-const addLiveReloadScript = {
-  name: 'livereload',
-  outro: () => {
-    return `document.write('<script src="http://localhost:${liveReloadPort}/livereload.js?snipver=1"></script>');`
-  },
-}
 
 /* Bundling for pug templates, CSS, and clientside JS */
 const bundleHTML = async () => {
-  const html = pug.renderFile(__dirname + '/src/index.pug')
+  const html = pug.renderFile(__dirname + '/src/index.pug', {
+    env: process.env.MODE,
+    liveReloadPort,
+  })
   await writeFile(__dirname + '/public/index.html', html)
 }
 
@@ -33,14 +31,9 @@ const bundleCSS = async () => {
 }
 
 const bundleJS = async () => {
-  let plugins = []
-  if (process.env.MODE === 'dev') {
-    plugins = [...plugins, addLiveReloadScript]
-  }
-
   const bundle = await rollup({
     input: 'src/script.js',
-    plugins,
+    plugins: rollupPlugins,
   })
   await bundle.write({
     entryFileNames: 'not-a-react-bundle.js',

@@ -25,3 +25,5 @@ html(lang="en-US")
       +section-color-transition('white-to-purple')
 
 script(src="not-a-react-bundle.js" defer)
+if env === 'dev'
+  script(src="http://localhost:" + liveReloadPort + "/livereload.js?snipver=1")
