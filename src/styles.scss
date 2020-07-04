@@ -134,29 +134,36 @@ section {
 
       .home-graphic-accent {
         position: absolute;
-        animation: float 3s ease-in-out infinite;
+        transform: scale(0);
+        transition: transform 0.3s;
+
+        &.animate {
+          transform: scale(1);
+          animation: float 3s ease-in-out infinite;
+        }
         &.heart {
           top: 0;
           right: 5%;
+          animation-delay: 0.3s;
         }
         &.megaphone {
           top: 40%;
           left: 0;
-          animation-delay: 1s;
+          animation-delay: 0.7s;
         }
         &.brush {
           top: 70%;
           right: 25%;
-          animation-delay: 2s;
+          animation-delay: 1.3s;
         }
 
         @keyframes float {
           0%,
           100% {
-            transform: translate(-2px, 10px);
+            transform: translate(0, 0);
           }
           50% {
-            transform: translate(3px, -10px);
+            transform: translate(-5px, -20px);
           }
         }
       }
