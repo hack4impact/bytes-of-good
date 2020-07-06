@@ -30,6 +30,7 @@ const observerCallback = (events) => {
       if (event.target.id === 'home') {
         console.log("remove white")
         navElement.classList.remove("white")
+
         // TODO: change the nav bar background when scrolling to / away from the top of the page
       } 
       else {
@@ -45,3 +46,13 @@ let observer = new IntersectionObserver(observerCallback, observerOptions)
 for (let sectionId of ['home', 'about', 'team', 'contact']) {
   observer.observe(document.getElementById(sectionId))
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});

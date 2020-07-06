@@ -238,6 +238,16 @@ nav {
     ul li a:hover::before, ul li a::before {
       background-color: $purple;
     } 
+    
+    img {
+      display: initial;
+    }
+    
+  }
+
+  img {
+    display: none;
+    width: 70px;
   }
 
   ul {
@@ -256,10 +266,19 @@ nav {
 
       &:first-of-type {
         margin-right: auto;
+        display: flex;
+        align-items: center;
+        
+        & a::before {
+          display: none;
+        }
       }
 
-      a,
+      
+
+      a ,
       a:hover {
+        line-height: 0;
         position: relative;
         color: inherit;
         text-decoration: none;
