@@ -216,6 +216,9 @@ section {
   }
 
   &#team {
+    h2 {
+      color: #0F5443;
+    }
     .team-members {
       display: flex;
       justify-content: flex-start;
@@ -258,6 +261,21 @@ section {
           }
         }
       }
+    }
+  }
+
+  &#contact {
+    display: flex;
+    align-items: center;
+    h2 {
+      color: $purple;
+    };
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-graphic {
+      color: green;
     }
   }
 }
