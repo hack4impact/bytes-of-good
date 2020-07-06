@@ -3,3 +3,10 @@
     hgroup
       h2 Our Team
       h3 Meet the star-studded cast
+
+    .team-members
+      each member in team
+        .card
+          .img-wrapper
+            img(src='/static/team/' + member.image)
+          #{member.name}

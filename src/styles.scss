@@ -214,6 +214,52 @@ section {
       width: 40vw;
     }
   }
+
+  &#team {
+    .team-members {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      width: 1050px;
+      margin: auto;
+
+      @media (max-width: 1099px) {
+        width: 700px;
+      }
+
+      @media (max-width: 749px) {
+        width: 350px;
+      }
+
+      .card {
+        min-width: 250px;
+        margin: 50px;
+
+        .img-wrapper {
+          position: relative;
+          border-radius: 20px;
+          img {
+            border-radius: inherit;
+            width: 100%;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            background: linear-gradient(
+              180deg,
+              rgba(4, 37, 29, 0) 67.19%,
+              #052820 100%
+            );
+          }
+        }
+      }
+    }
+  }
 }
 
 nav {
@@ -225,24 +271,24 @@ nav {
   height: 80px;
   background-color: $purple;
   font-size: 24px;
-  
+
   display: flex;
   justify-content: center;
-  transition: background-color .2s, box-shadow .2s;
+  transition: background-color 0.2s, box-shadow 0.2s;
   color: #ffffff;
 
   &.white {
     background-color: white;
     color: $purple;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
-    ul li a:hover::before, ul li a::before {
+    ul li a:hover::before,
+    ul li a::before {
       background-color: $purple;
-    } 
-    
+    }
+
     img {
       display: initial;
     }
-    
   }
 
   img {
@@ -268,15 +314,13 @@ nav {
         margin-right: auto;
         display: flex;
         align-items: center;
-        
+
         & a::before {
           display: none;
         }
       }
 
-      
-
-      a ,
+      a,
       a:hover {
         line-height: 0;
         position: relative;
