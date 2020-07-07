@@ -23,6 +23,8 @@ html(lang="en-US")
       include sections/contact.pug
       +section-color-transition('white-to-purple')
 
+      include footer.pug
+
 script(src="not-a-react-bundle.js" defer)
 if env === 'dev'
   script(src="http://localhost:" + liveReloadPort + "/livereload.js?snipver=1")
