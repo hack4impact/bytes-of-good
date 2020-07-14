@@ -59,6 +59,10 @@ h1 {
   margin-bottom: 50px;
 }
 
+h2 {
+  font-size: 60px;
+}
+
 hgroup {
   h2 {
     font-size: 30px;
@@ -66,6 +70,27 @@ hgroup {
   h3 {
     font-size: 60px;
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  body {
+    font-size: 18px;
+  }
+
+  hgroup {
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 40px;
+    }
   }
 }
 
@@ -270,7 +295,7 @@ section {
 
     h2 {
       color: $purple;
-    };
+    }
 
     .contact-content {
       display: flex;
@@ -299,7 +324,7 @@ section {
         font-size: 20px;
         font-family: $body-font;
       }
-      
+
       #submit {
         background-color: $purple;
         color: white;
@@ -332,17 +357,22 @@ section {
     display: flex;
     color: white;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    h2,
+    h3 {
+      margin-top: 0;
+    }
     .footer-content {
       max-width: 600px;
+      min-width: 400px;
+      flex: 1;
       margin-right: 100px;
-      a, a:hover {
+      a,
+      a:hover {
         color: white;
         font-style: normal;
         text-decoration: none;
-      }
-      h3 {
-        margin-top: 0px;
-        font-size: 50px;
       }
     }
     .footer-links {
