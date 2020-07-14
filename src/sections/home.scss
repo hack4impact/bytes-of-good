@@ -1,0 +1,134 @@
+@import '../variables.scss';
+
+#home {
+  margin-top: 0;
+  min-height: 550px;
+  max-height: 80vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  $breakpoint: 950px;
+
+  @media (max-width: $breakpoint) {
+    justify-content: center;
+  }
+
+  .header-content {
+    margin-right: 80px;
+    p {
+      font-size: 34px;
+      margin-bottom: 70px;
+      max-width: 600px;
+
+      @media (max-width: 1100px) {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: $breakpoint) {
+      text-align: center;
+      margin: auto;
+      max-width: 80%;
+    }
+
+    .cta-link {
+      display: inline-block;
+      font-size: 28px;
+      color: $purple;
+      background: $mint;
+      font-family: $header-font;
+      font-weight: bold;
+      border-radius: 50px;
+      padding: 18px 60px;
+      transition: box-shadow 0.2s, transform 0.2s;
+
+      $drop-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+      @media (max-width: $mobile-breakpoint) {
+        box-shadow: $drop-shadow;
+        font-size: 20px;
+        position: absolute;
+        bottom: -40px;
+        left: 15%;
+        right: 15%;
+      }
+
+      &:hover {
+        box-shadow: $drop-shadow;
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  .header-graphic {
+    position: relative;
+    flex: 1;
+    height: 100%;
+
+    @media (max-width: $breakpoint) {
+      position: absolute;
+      pointer-events: none;
+      max-width: 105vw;
+      width: 105vw;
+      height: 80vh;
+
+      .home-graphic {
+        display: none;
+      }
+    }
+
+    .home-graphic-accent {
+      position: absolute;
+      transform: scale(0);
+      transition: transform 0.3s;
+
+      &.animate {
+        transform: scale(1);
+        animation: float 3s ease-in-out infinite;
+      }
+      &.heart {
+        top: 0;
+        right: 5%;
+        animation-delay: 0.3s;
+
+        @media (max-width: $breakpoint) {
+          top: 5%;
+          right: 0;
+          height: 75px;
+          width: 75px;
+        }
+      }
+      &.megaphone {
+        top: 40%;
+        left: 0;
+        animation-delay: 0.7s;
+
+        @media (max-width: $breakpoint) {
+          height: 75px;
+          width: 75px;
+        }
+      }
+      &.brush {
+        top: 70%;
+        right: 25%;
+        animation-delay: 1.3s;
+
+        @media (max-width: $breakpoint) {
+          right: 5%;
+          top: 85%;
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-5px, -20px);
+        }
+      }
+    }
+  }
+}
