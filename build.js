@@ -1,5 +1,5 @@
 const livereload = require('livereload')
-const sassCompiler = require('node-sass')
+const sassCompiler = require('sass')
 const fs = require('fs')
 const path = require('path')
 const { promisify } = require('util')
