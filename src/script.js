@@ -26,16 +26,10 @@ const observerOptions = {
 const observerCallback = (events) => {
   events.forEach((event) => {
     if (event.isIntersecting) {
-      console.log("shoots")
       if (event.target.id === 'home') {
-        console.log("remove white")
-        navElement.classList.remove("white")
-
-        // TODO: change the nav bar background when scrolling to / away from the top of the page
-      } 
-      else {
-        console.log("white")
-        navElement.classList.add("white")
+        navElement.classList.remove('white')
+      } else {
+        navElement.classList.add('white')
       }
     }
   })
@@ -47,12 +41,12 @@ for (let sectionId of ['home', 'about', 'team', 'contact']) {
   observer.observe(document.getElementById(sectionId))
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+    e.preventDefault()
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
-});
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    })
+  })
+})
