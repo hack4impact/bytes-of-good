@@ -24,6 +24,10 @@
     justify-content: space-around;
     margin-bottom: 120px;
 
+    @media (max-width: $mobile-breakpoint) {
+      margin-bottom: 60px;
+    }
+
     .description {
       text-decoration: none;
       color: inherit;
@@ -35,6 +39,11 @@
       margin: 30px;
       margin-left: 0;
 
+      @media (max-width: $mobile-breakpoint) {
+        min-width: 100%;
+        margin: 20px;
+      }
+
       strong {
         color: $purple;
       }
@@ -43,6 +52,11 @@
         height: 175px;
         width: 175px;
         margin-right: 30px;
+
+        @media (max-width: $mobile-breakpoint) {
+          height: 100px;
+          width: 100px;
+        }
       }
     }
   }
