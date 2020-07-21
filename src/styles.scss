@@ -1,4 +1,5 @@
 @use 'sections/home.scss';
+@use 'sections/about.scss';
 @import 'variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap');
 
@@ -236,51 +237,6 @@ section {
   padding: 120px 30px;
   position: relative;
   scroll-margin-top: 5rem;
-
-  &#about {
-    overflow: hidden;
-    h2 {
-      color: $purple;
-    }
-    h3.powers-combined-heading {
-      font-size: 44px;
-    }
-    p.powers-combined-description {
-      max-width: 55%;
-    }
-    .description-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      margin-bottom: 120px;
-
-      .description {
-        flex: 1;
-        min-width: 520px;
-        max-width: 600px;
-        display: flex;
-        align-items: center;
-        margin: 30px;
-        margin-left: 0;
-
-        strong {
-          color: $purple;
-        }
-
-        img {
-          height: 175px;
-          width: 175px;
-          margin-right: 30px;
-        }
-      }
-    }
-    img.people {
-      position: absolute;
-      bottom: -10vw;
-      right: -8vw;
-      width: 40vw;
-    }
-  }
 
   &#team {
     h2 {
