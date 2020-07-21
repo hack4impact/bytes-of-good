@@ -8,9 +8,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  $breakpoint: 950px;
+  $tablet-breakpoint: 950px;
 
-  @media (max-width: $breakpoint) {
+  @media (max-width: $tablet-breakpoint) {
     justify-content: center;
   }
 
@@ -26,7 +26,7 @@
       }
     }
 
-    @media (max-width: $breakpoint) {
+    @media (max-width: $tablet-breakpoint) {
       text-align: center;
       margin: auto;
       max-width: 80%;
@@ -66,12 +66,10 @@
     flex: 1;
     height: 100%;
 
-    @media (max-width: $breakpoint) {
+    @media (max-width: $tablet-breakpoint) {
       position: absolute;
       pointer-events: none;
-      max-width: 105vw;
       width: 105vw;
-      height: 80vh;
 
       .home-graphic {
         display: none;
@@ -92,7 +90,7 @@
         right: 5%;
         animation-delay: 0.3s;
 
-        @media (max-width: $breakpoint) {
+        @media (max-width: $tablet-breakpoint) {
           top: 5%;
           right: 0;
           height: 75px;
@@ -104,7 +102,7 @@
         left: 0;
         animation-delay: 0.7s;
 
-        @media (max-width: $breakpoint) {
+        @media (max-width: $tablet-breakpoint) {
           height: 75px;
           width: 75px;
         }
@@ -114,7 +112,7 @@
         right: 25%;
         animation-delay: 1.3s;
 
-        @media (max-width: $breakpoint) {
+        @media (max-width: $tablet-breakpoint) {
           right: 5%;
           top: 85%;
         }
