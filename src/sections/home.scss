@@ -32,7 +32,9 @@
       max-width: 80%;
     }
 
-    .cta-link {
+    .cta-link,
+    .cta-link:visited {
+      text-decoration: none;
       display: inline-block;
       font-size: 28px;
       color: $purple;
