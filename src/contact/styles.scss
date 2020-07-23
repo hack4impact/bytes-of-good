@@ -1,9 +1,15 @@
+@import '../variables.scss';
+
 #contact {
   display: flex;
   align-items: center;
 
   h2 {
     color: $purple;
+  }
+
+  p {
+    margin-bottom: 50px;
   }
 
   .contact-content {
@@ -19,6 +25,11 @@
     display: flex;
     border-radius: 100px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 18px;
+    }
 
     input:focus {
       border: 0;
@@ -30,34 +41,31 @@
       border: 0;
       border-radius: 100px 0 0 100px;
       width: 80%;
-      font-size: 20px;
+      font-size: inherit;
       font-family: $body-font;
     }
 
     #submit {
-      background-color: $purple;
+      background: $purple;
       color: white;
-      border: 0;
+      border: none;
       border-radius: 0 100px 100px 0;
       width: 20%;
       font-family: $header-font;
-      font-size: 25px;
+      font-size: 1.1em;
       font-weight: bold;
       padding: 0;
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     .contact-graphic {
       display: none;
     }
     .input-box {
-      #email {
-        width: 60%;
-      }
-      #submit {
-        width: 40%;
-      }
+      max-width: 800px;
+      width: 100%;
+      margin: auto;
     }
   }
 }
