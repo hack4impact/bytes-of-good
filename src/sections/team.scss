@@ -1,0 +1,85 @@
+@import '../variables.scss';
+
+#team {
+  h2 {
+    color: #0f5443;
+  }
+  .team-members {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 1050px;
+    margin: auto;
+
+    .member {
+      margin: 50px;
+      width: 250px;
+
+      .description {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .social-link {
+        height: 20px;
+        margin-right: 20px;
+      }
+
+      .member-img {
+        line-height: 0;
+        position: relative;
+        margin-bottom: 30px;
+
+        h3 {
+          position: absolute;
+          color: white;
+          $margin: 15px;
+          bottom: $margin;
+          left: $margin;
+          right: $margin;
+          margin-bottom: 0;
+          font-size: 24px;
+          font-weight: normal;
+          line-height: 1.5em;
+        }
+
+        .img-wrapper {
+          position: relative;
+          border-radius: 10px;
+          img {
+            border-radius: inherit;
+            width: 100%;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            background: linear-gradient(
+              180deg,
+              rgba(4, 37, 29, 0) 67.19%,
+              #052820 100%
+            );
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1099px) {
+      width: 700px;
+    }
+
+    @media (max-width: 749px) {
+      width: auto;
+      flex-direction: column;
+      align-items: center;
+
+      .member {
+        margin: 30px 0;
+      }
+    }
+  }
+}

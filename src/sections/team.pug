@@ -1,3 +1,5 @@
+include ../vectors.pug
+
 .mint-background
   section#team
     hgroup
@@ -6,7 +8,13 @@
 
     .team-members
       each member in team
-        .card
-          .img-wrapper
-            img(src='/static/team/' + member.image)
-          #{member.name}
+        .member
+          .member-img
+            .img-wrapper
+              img(src='/static/team/' + member.image)
+            h3 #{member.name} 
+          p.description #{member.description}
+          each socialLink in member.socialLinks
+            a.social-link(target=_blank href=socialLink.href
+                          aria-label=member.name + ' ' + socialLink.name)
+              +icon(socialLink.name)

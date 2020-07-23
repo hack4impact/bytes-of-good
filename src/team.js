@@ -1,5 +1,5 @@
 // memberOf supported types: 'hack4impact', 'impact labs'
-// link name supported types: 'LinkedIn', 'Twitter'
+// link name supported types: 'linkedin', 'twitter'
 
 module.exports = [
   {
@@ -7,13 +7,13 @@ module.exports = [
     description: 'God of all things',
     memberOf: 'hack4impact',
     image: 'thejameswang.jpg',
-    links: [
+    socialLinks: [
       {
-        name: 'LinkedIn',
+        name: 'linkedin',
         href: '',
       },
       {
-        name: 'Twitter',
+        name: 'twitter',
         href: '',
       },
     ],
@@ -23,13 +23,13 @@ module.exports = [
     description: 'Resident web dev sorceror',
     memberOf: 'hack4impact',
     image: 'benholmes.jpg',
-    links: [
+    socialLinks: [
       {
-        name: 'LinkedIn',
+        name: 'linkedin',
         href: '',
       },
       {
-        name: 'Twitter',
+        name: 'twitter',
         href: '',
       },
     ],
@@ -39,13 +39,13 @@ module.exports = [
     description: 'Impact Labs overlord',
     memberOf: 'impact labs',
     image: 'aaronmayer.jpg',
-    links: [
+    socialLinks: [
       {
-        name: 'LinkedIn',
+        name: 'linkedin',
         href: '',
       },
       {
-        name: 'Twitter',
+        name: 'twitter',
         href: '',
       },
     ],
@@ -55,13 +55,13 @@ module.exports = [
     description: 'God of all things',
     memberOf: 'hack4impact',
     image: 'thejameswang.jpg',
-    links: [
+    socialLinks: [
       {
-        name: 'LinkedIn',
+        name: 'linkedin',
         href: '',
       },
       {
-        name: 'Twitter',
+        name: 'twitter',
         href: '',
       },
     ],
@@ -71,13 +71,13 @@ module.exports = [
     description: 'Resident web dev sorceror',
     memberOf: 'hack4impact',
     image: 'benholmes.jpg',
-    links: [
+    socialLinks: [
       {
-        name: 'LinkedIn',
+        name: 'linkedin',
         href: '',
       },
       {
-        name: 'Twitter',
+        name: 'twitter',
         href: '',
       },
     ],
@@ -87,13 +87,13 @@ module.exports = [
     description: 'Impact Labs overlord',
     memberOf: 'impact labs',
     image: 'aaronmayer.jpg',
-    links: [
+    socialLinks: [
       {
-        name: 'LinkedIn',
+        name: 'linkedin',
         href: '',
       },
       {
-        name: 'Twitter',
+        name: 'twitter',
         href: '',
       },
     ],

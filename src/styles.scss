@@ -1,5 +1,6 @@
 @use 'sections/home.scss';
 @use 'sections/about.scss';
+@use 'sections/team.scss';
 @import 'variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap');
 
@@ -237,55 +238,6 @@ section {
   padding: 120px 30px;
   position: relative;
   scroll-margin-top: 5rem;
-
-  &#team {
-    h2 {
-      color: #0f5443;
-    }
-    .team-members {
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      width: 1050px;
-      margin: auto;
-
-      @media (max-width: 1099px) {
-        width: 700px;
-      }
-
-      @media (max-width: 749px) {
-        width: 350px;
-      }
-
-      .card {
-        min-width: 250px;
-        margin: 50px;
-
-        .img-wrapper {
-          position: relative;
-          border-radius: 20px;
-          img {
-            border-radius: inherit;
-            width: 100%;
-          }
-          &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: inherit;
-            background: linear-gradient(
-              180deg,
-              rgba(4, 37, 29, 0) 67.19%,
-              #052820 100%
-            );
-          }
-        }
-      }
-    }
-  }
 
   &#contact {
     display: flex;
