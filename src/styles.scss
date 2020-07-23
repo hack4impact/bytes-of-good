@@ -1,6 +1,7 @@
 @use 'sections/home.scss';
 @use 'sections/about.scss';
 @use 'sections/team.scss';
+@use 'sections/footer.scss';
 @import 'variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap');
 
@@ -299,45 +300,6 @@ section {
         #submit {
           width: 40%;
         }
-      }
-    }
-  }
-
-  &#footer {
-    display: flex;
-    color: white;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    h2,
-    h3 {
-      margin-top: 0;
-    }
-    .footer-content {
-      max-width: 600px;
-      min-width: 400px;
-      flex: 1;
-      margin-right: 100px;
-      a,
-      a:hover {
-        color: white;
-        font-style: normal;
-        text-decoration: none;
-      }
-    }
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      ul {
-        padding: 0;
-        margin-right: 50px;
-      }
-      li {
-        list-style-type: none;
-        margin-bottom: 32px;
-      }
-      a {
-        color: white;
       }
     }
   }
