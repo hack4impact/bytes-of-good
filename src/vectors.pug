@@ -1,6 +1,7 @@
 mixin vector(hexcode1, hexcode2)
-  svg.section-bottom-vector(width="1442" height="100" viewBox="0 0 1442 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" style="background: " + hexcode2)
-    path(d="M1441.5 0L0 99.5V0H1441.5Z" fill=hexcode1)
+  svg.section-bottom-vector(width="1440" height="100" viewBox="0 0 1440 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg")
+    path(d="M1440 0L0 100V0H1440Z" fill=hexcode1)
+    path(d="M0 100L1440 -6.10352e-05L1440 99.9999L0 100Z" fill=hexcode2)
 
 mixin section-color-transition(color)
   if color === 'purple-to-white'
