@@ -1,0 +1,63 @@
+#contact {
+  display: flex;
+  align-items: center;
+
+  h2 {
+    color: $purple;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-graphic {
+    color: green;
+  }
+
+  .input-box {
+    display: flex;
+    border-radius: 100px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+
+    input:focus {
+      border: 0;
+      outline: 0;
+    }
+
+    #email {
+      padding: 20px;
+      border: 0;
+      border-radius: 100px 0 0 100px;
+      width: 80%;
+      font-size: 20px;
+      font-family: $body-font;
+    }
+
+    #submit {
+      background-color: $purple;
+      color: white;
+      border: 0;
+      border-radius: 0 100px 100px 0;
+      width: 20%;
+      font-family: $header-font;
+      font-size: 25px;
+      font-weight: bold;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .contact-graphic {
+      display: none;
+    }
+    .input-box {
+      #email {
+        width: 60%;
+      }
+      #submit {
+        width: 40%;
+      }
+    }
+  }
+}

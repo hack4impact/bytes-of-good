@@ -5,7 +5,7 @@ const path = require('path')
 const { promisify } = require('util')
 const pug = require('pug')
 const { rollup } = require('rollup')
-const team = require('./src/team')
+const teamMemberList = require('./src/team/memberList')
 
 /* Configurable options */
 const liveReloadPort = 35729
@@ -21,7 +21,7 @@ const bundleHTML = async () => {
   const html = pug.renderFile(__dirname + '/src/index.pug', {
     env: process.env.MODE,
     liveReloadPort,
-    team,
+    teamMemberList,
   })
   await writeFile(__dirname + '/public/index.html', html)
 }

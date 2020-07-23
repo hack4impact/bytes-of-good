@@ -11,19 +11,19 @@ html(lang="en-US")
     main
       include nav.pug
 
-      include sections/home.pug
+      include home/index
       +section-color-transition('purple-to-white')
 
-      include sections/about.pug
+      include about/index
       +section-color-transition('white-to-mint')
 
-      include sections/team.pug
+      include team/index
       +section-color-transition('mint-to-white')
 
-      include sections/contact.pug
+      include contact.pug
       +section-color-transition('white-to-purple')
 
-      include sections/footer.pug
+      include footer/index
 
 script(src="not-a-react-bundle.js" defer)
 if env === 'dev'
