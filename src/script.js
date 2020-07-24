@@ -37,7 +37,7 @@ const observerCallback = (events) => {
 
 let observer = new IntersectionObserver(observerCallback, observerOptions)
 
-for (let sectionId of ['home', 'about', 'team', 'contact']) {
+for (let sectionId of ['home', 'about', 'team', 'listen']) {
   observer.observe(document.getElementById(sectionId))
 }
 
