@@ -67,16 +67,16 @@ module.exports = [
   },
   {
     name: 'Ben Holmes',
-    description: 'Marketting designer',
+    description: 'Marketing designer',
     image: 'benholmes.jpg',
     socialLinks: [
       {
         name: 'linkedin',
-        href: 'https://twitter.com/bholmesdev',
+        href: 'https://www.linkedin.com/in/bholmesdev/',
       },
       {
         name: 'twitter',
-        href: 'https://www.linkedin.com/in/bholmesdev/',
+        href: 'https://twitter.com/bholmesdev',
       },
     ],
   },
