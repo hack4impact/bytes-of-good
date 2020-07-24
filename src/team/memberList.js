@@ -44,6 +44,21 @@ module.exports = [
     ],
   },
   {
+    name: 'Julia Pan',
+    description: 'Content Writer',
+    image: 'juliapan.jpg',
+    socialLinks: [
+      {
+        name: 'linkedin',
+        href: 'https://www.linkedin.com/in/panjulia/',
+      },
+      {
+        name: 'twitter',
+        href: 'http://twitter.com/pantsjuju/',
+      },
+    ],
+  },
+  {
     name: 'Priya Malla',
     description: 'Content Writer',
     image: 'priyamalla.jpg',
