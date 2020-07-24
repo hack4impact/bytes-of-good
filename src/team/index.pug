@@ -15,6 +15,6 @@ include ../vectors.pug
             h3 #{member.name} 
           p.description #{member.description}
           each socialLink in member.socialLinks
-            a.social-link(target=_blank href=socialLink.href
+            a.social-link(target="_blank" href=socialLink.href
                           aria-label=member.name + ' ' + socialLink.name)
               +icon(socialLink.name)

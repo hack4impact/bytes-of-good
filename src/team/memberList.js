@@ -1,10 +1,10 @@
-// memberOf supported types: 'hack4impact', 'impact labs'
-// link name supported types: 'linkedin', 'twitter'
+// socialLink name supported types: 'linkedin', 'twitter'
+// check build.js to see how this file gets rolled into Pug!
 
 module.exports = [
   {
     name: 'Aaron Mayer',
-    description: 'Your one-and-only host!',
+    description: 'Host and Content Writer',
     image: 'aaronmayer.jpg',
     socialLinks: [
       {
@@ -33,6 +33,17 @@ module.exports = [
     ],
   },
   {
+    name: 'J.J. Lu',
+    description: 'Producer and Editor',
+    image: 'jjlu.jpg',
+    socialLinks: [
+      {
+        name: 'linkedin',
+        href: 'https://www.linkedin.com/in/jjlu/',
+      },
+    ],
+  },
+  {
     name: 'Priya Malla',
     description: 'Content Writer',
     image: 'priyamalla.jpg',
@@ -40,17 +51,6 @@ module.exports = [
       {
         name: 'linkedin',
         href: 'https://www.linkedin.com/in/priya-malla-1b3002155/',
-      },
-    ],
-  },
-  {
-    name: 'J.J. Lu',
-    description: 'Producer and editor',
-    image: 'jjlu.jpg',
-    socialLinks: [
-      {
-        name: 'linkedin',
-        href: 'https://www.linkedin.com/in/jjlu/',
       },
     ],
   },
@@ -67,7 +67,7 @@ module.exports = [
   },
   {
     name: 'Ben Holmes',
-    description: 'Marketing designer',
+    description: 'Marketing and Design',
     image: 'benholmes.jpg',
     socialLinks: [
       {
