@@ -3,98 +3,80 @@
 
 module.exports = [
   {
-    name: 'James Wang',
-    description: 'God of all things',
-    memberOf: 'hack4impact',
-    image: 'thejameswang.jpg',
-    socialLinks: [
-      {
-        name: 'linkedin',
-        href: '',
-      },
-      {
-        name: 'twitter',
-        href: '',
-      },
-    ],
-  },
-  {
-    name: 'Ben Holmes',
-    description: 'Resident web dev sorceror',
-    memberOf: 'hack4impact',
-    image: 'benholmes.jpg',
-    socialLinks: [
-      {
-        name: 'linkedin',
-        href: '',
-      },
-      {
-        name: 'twitter',
-        href: '',
-      },
-    ],
-  },
-  {
     name: 'Aaron Mayer',
-    description: 'Impact Labs overlord',
-    memberOf: 'impact labs',
+    description: 'Your one-and-only host!',
     image: 'aaronmayer.jpg',
     socialLinks: [
       {
         name: 'linkedin',
-        href: '',
+        href: 'https://www.linkedin.com/in/aaron-mayer-108/',
       },
       {
         name: 'twitter',
-        href: '',
+        href: 'https://twitter.com/aaronmayer108',
       },
     ],
   },
   {
     name: 'James Wang',
-    description: 'God of all things',
-    memberOf: 'hack4impact',
-    image: 'thejameswang.jpg',
+    description: 'Producer',
+    image: 'jameswang.jpg',
     socialLinks: [
       {
         name: 'linkedin',
-        href: '',
+        href: 'https://www.linkedin.com/in/thejameswang/',
       },
       {
         name: 'twitter',
-        href: '',
+        href: 'https://twitter.com/thejameswang_',
+      },
+    ],
+  },
+  {
+    name: 'Priya Malla',
+    description: 'Content Writer',
+    image: 'priyamalla.jpg',
+    socialLinks: [
+      {
+        name: 'linkedin',
+        href: 'https://www.linkedin.com/in/priya-malla-1b3002155/',
+      },
+    ],
+  },
+  {
+    name: 'J.J. Lu',
+    description: 'Producer and editor',
+    image: 'jjlu.jpg',
+    socialLinks: [
+      {
+        name: 'linkedin',
+        href: 'https://www.linkedin.com/in/jjlu/',
+      },
+    ],
+  },
+  {
+    name: 'Eric Newcomer',
+    description: 'Content Writer',
+    image: 'ericnewcomer.jpg',
+    socialLinks: [
+      {
+        name: 'linkedin',
+        href: 'https://www.linkedin.com/in/eric-newcomer/',
       },
     ],
   },
   {
     name: 'Ben Holmes',
-    description: 'Resident web dev sorceror',
-    memberOf: 'hack4impact',
+    description: 'Marketting designer',
     image: 'benholmes.jpg',
     socialLinks: [
       {
         name: 'linkedin',
-        href: '',
+        href: 'https://twitter.com/bholmesdev',
       },
       {
         name: 'twitter',
-        href: '',
-      },
-    ],
-  },
-  {
-    name: 'Aaron Mayer',
-    description: 'Impact Labs overlord',
-    memberOf: 'impact labs',
-    image: 'aaronmayer.jpg',
-    socialLinks: [
-      {
-        name: 'linkedin',
-        href: '',
-      },
-      {
-        name: 'twitter',
-        href: '',
+        href: 'https://www.linkedin.com/in/bholmesdev/',
       },
     ],
   },
