@@ -17,12 +17,28 @@
     margin-bottom: 50px;
   }
 
+  .listen-now, .listen-now:visited {
+    display: block;
+    color: $purple;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    text-decoration: none;
+
+    svg {
+      width: 44px;
+      height: 44px;
+      margin-right: 24px;
+    }
+  }
+
   .input-box {
     $border-radius: 100px;
     display: flex;
     border-radius: $border-radius;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
-    font-size: 20px;
+    font-size: 24px;
+    margin-bottom: 40px;
 
     @media (max-width: $mobile-breakpoint) {
       font-size: 16px;
@@ -31,6 +47,7 @@
     input {
       flex: 1;
       padding: 20px;
+      padding-left: 30px;
       margin: 0;
       border: 0;
       border-radius: $border-radius 0 0 $border-radius;
@@ -63,7 +80,6 @@
     }
     .input-box {
       width: 100%;
-      margin: auto;
     }
   }
 }
