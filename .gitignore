@@ -2,6 +2,7 @@ node_modules
 *.DS_Store
 *.vscode
 public/*
+!public/_redirects
 !public/static
 !public/favicon.jpg
 !public/robots.txt
