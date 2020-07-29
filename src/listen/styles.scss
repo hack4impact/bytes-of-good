@@ -22,13 +22,17 @@
     color: $purple;
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 6px;
     text-decoration: none;
 
     svg {
       width: 44px;
       height: 44px;
       margin-right: 24px;
+
+      @media(max-width: $mobile-breakpoint) {
+        margin-right: 15px;
+      }
     }
   }
 
@@ -40,6 +44,7 @@
     font-size: 24px;
     margin-bottom: 40px;
 
+
     @media (max-width: $mobile-breakpoint) {
       font-size: 16px;
     }
@@ -47,12 +52,16 @@
     input {
       flex: 1;
       padding: 20px;
-      padding-left: 30px;
+      padding-left: 40px;
       margin: 0;
       border: 0;
       border-radius: $border-radius 0 0 $border-radius;
       font-size: inherit;
       font-family: $body-font;
+
+      @media(max-width: $mobile-breakpoint) {
+        padding-left: 20px;
+      }
     }
 
     button {
