@@ -8,18 +8,37 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  $tablet-breakpoint: 950px;
+  $tablet-breakpoint: 1050px;
+
+  @media(max-width: $mobile-breakpoint) {
+    padding-top: 100px;
+  }
 
   @media (max-width: $tablet-breakpoint) {
     justify-content: center;
   }
 
   .header-content {
-    margin-right: 80px;
+    max-width: 450px;
+    
+    h1 {
+      svg {
+        margin-left: 34px;
+      }
+      @media (max-width: $mobile-breakpoint) {
+        margin-bottom: 20px;
+
+        svg {
+          display: block;
+          margin: auto;
+          margin-top: 15px;
+        }
+      }
+    }
+
     p {
       font-size: 34px;
       margin-bottom: 70px;
-      max-width: 600px;
 
       @media (max-width: 1100px) {
         font-size: 24px;
@@ -29,7 +48,6 @@
     @media (max-width: $tablet-breakpoint) {
       text-align: center;
       margin: auto;
-      max-width: 80%;
     }
 
     .cta-link,
@@ -67,6 +85,7 @@
     position: relative;
     flex: 1;
     height: 100%;
+    max-width: 700px;
 
     @media (max-width: $tablet-breakpoint) {
       position: absolute;

@@ -4,25 +4,7 @@
 @import 'listen/styles.scss';
 @import 'footer/styles.scss';
 @import 'variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap');
-
-@font-face {
-  font-family: 'Visby CF';
-  font-display: swap;
-  font-weight: bold;
-  src: url('static/fonts/VisbyCF-Bold.woff2') format('woff2'),
-    url('static/fonts/VisbyCF-Bold.ttf') format('truetype'),
-    url('static/fonts/VisbyCF-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Visby CF';
-  font-display: swap;
-  font-weight: normal;
-  src: url('static/fonts/VisbyCF-Normal.woff2') format('woff2'),
-    url('static/fonts/VisbyCF-Normal.ttf') format('truetype'),
-    url('static/fonts/VisbyCF-Normal.woff') format('woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Varela+Round&display=swap');
 
 html {
   padding: 0;
@@ -178,6 +160,7 @@ h1 {
   margin-top: 0;
   font-size: 80px;
   margin-bottom: 50px;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -186,7 +169,8 @@ h2 {
 
 hgroup {
   h2 {
-    font-size: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
   }
   h3 {
     font-size: 60px;
