@@ -1,5 +1,5 @@
 /* Trigger the floating icon animations in the home section */
-const floatingIcons = document.querySelectorAll('svg.home-graphic-accent')
+const floatingIcons = document.querySelectorAll('svg.floating-icon')
 const navElement = document.querySelector('nav')
 
 const wait = (callback, timeout) =>

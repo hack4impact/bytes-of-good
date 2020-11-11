@@ -10,7 +10,7 @@
   justify-content: space-between;
   $tablet-breakpoint: 1050px;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media (max-width: $mobile-breakpoint) {
     padding-top: 70px;
   }
 
@@ -20,7 +20,7 @@
 
   .header-content {
     max-width: 450px;
-    
+
     h1 {
       svg {
         margin-left: 34px;
@@ -92,12 +92,12 @@
       pointer-events: none;
       width: 105vw;
 
-      .home-graphic {
+      .woman-arms-outstretched {
         display: none;
       }
     }
 
-    .home-graphic-accent {
+    .floating-icon {
       position: absolute;
       transform: scale(0);
       transition: transform 0.3s;
