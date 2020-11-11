@@ -81,6 +81,32 @@ module.exports = [
     ],
   },
   {
+    name: 'Angela Jin',
+    description: 'Content Writer',
+    image: 'angelajin.jpg',
+    socialLinks: [
+      {
+        name: 'linkedin',
+        href: 'https://www.linkedin.com/in/angela-c-jin/',
+      },
+      {
+        name: 'twitter',
+        href: 'https://twitter.com/jin_gle_bells13',
+      },
+    ],
+  },
+  {
+    name: 'Elena Fowler',
+    description: 'Content Writer',
+    image: 'elenafowler.jpg',
+    socialLinks: [
+      {
+        name: 'linkedin',
+        href: 'https://www.linkedin.com/in/elena-fowler/',
+      },
+    ],
+  },
+  {
     name: 'Ben Holmes',
     description: 'Marketing and Design',
     image: 'benholmes.jpg',
