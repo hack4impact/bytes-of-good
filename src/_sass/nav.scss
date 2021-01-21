@@ -1,39 +1,4 @@
-@import 'home/styles.scss';
-@import 'about/styles.scss';
-@import 'team/styles.scss';
-@import 'listen/styles.scss';
-@import 'footer/styles.scss';
 @import 'variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Varela+Round&display=swap');
-
-html {
-  padding: 0;
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $body-font;
-  padding: 0;
-  margin: 0;
-  letter-spacing: 0.03em;
-  color: $black;
-  font-size: 24px;
-}
-
-$nav-height: 80px;
-
-main {
-  margin-top: $nav-height;
-  overflow: hidden;
-}
-
-nav {
-  height: $nav-height;
-}
 
 @media (max-width: $mobile-breakpoint) {
   $mobile-nav-height: 60px;
@@ -46,17 +11,19 @@ nav {
 }
 
 nav {
+  height: $nav-height;
   z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: $purple;
-  font-size: 24px;
+  font-family: $header-font;
+  font-size: 22px;
 
   @media (max-width: $mobile-breakpoint) {
-    height: 60px;
     font-size: 16px;
+    height: 60px;
   }
 
   display: flex;
@@ -148,80 +115,4 @@ nav {
       }
     }
   }
-}
-
-h1,
-h2,
-h3 {
-  font-family: $header-font;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 80px;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 60px;
-}
-
-hgroup {
-  h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-  }
-  h3 {
-    font-size: 60px;
-    margin-top: 15px;
-  }
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 60px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  body {
-    font-size: 18px;
-  }
-
-  hgroup {
-    h2 {
-      font-size: 20px;
-    }
-    h3 {
-      font-size: 40px;
-    }
-  }
-}
-
-a,
-button {
-  cursor: pointer;
-}
-
-.purple-background {
-  background-color: $purple;
-}
-
-.mint-background {
-  background-color: $mint;
-}
-
-.section-bottom-vector {
-  width: 100%;
-  height: 8vw;
-  margin-bottom: -7px;
-}
-
-section {
-  max-width: $content-max-width;
-  margin: auto;
-  padding: 120px 30px;
-  position: relative;
-  scroll-margin-top: 5rem;
 }

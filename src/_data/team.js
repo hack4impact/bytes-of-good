@@ -1,5 +1,4 @@
-// socialLink name supported types: 'linkedin', 'twitter'
-// check build.js to see how this file gets rolled into Pug!
+// socialLink expected types: 'linkedin', 'twitter'
 
 module.exports = [
   {
