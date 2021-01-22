@@ -7,11 +7,11 @@ include ../vectors.pug
       h3 Meet the star-studded cast
 
     .team-members
-      each member in teamMemberList
+      each member in team
         .member
           .member-img
             .img-wrapper
-              img(src='/static/team/' + member.image)
+              img(src='/images/team/' + member.image)
             h3 #{member.name} 
           p.description #{member.description}
           each socialLink in member.socialLinks

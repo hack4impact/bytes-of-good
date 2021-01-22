@@ -1,42 +1,19 @@
-include vectors.pug
+---
+title: Bytes of Good
+layout: layout
+styles: home
+---
 
-<!DOCTYPE html>
-html(lang="en-US")
-  head
-    title Bytes of Good
-    link(rel="stylesheet" href="styles.css")
-    link(rel="icon" type="img/png" href="static/favicon.png")
-    meta(name='viewport' content='width=device-width,initial-scale=1.0')
+include _includes/home/vectors.pug
 
-    meta(name="twitter:card" content="summary_large_image")
-    meta(name="twitter:site" content="@impactlabs_io")
-    meta(name="description" content="A podcast on the underserved intersection of tech and social good. Listen now on Spotify!")
-    meta(property="og:url" content='https://bytesofgood.org')
-    meta(property="og:image" content='https://bytesofgood.org/static/og-image.jpg')
-    meta(property="og:image:width" content="1200")
-    meta(property="og:image:height" content="630")
-    meta(property="og:site_name" content="Bytes of Good")
-    meta(property="og:title" content="Bytes of Good Podcast")
-    meta(property="og:description" content="A podcast on the underserved intersection of tech and social good. Listen now on Spotify!")
+include _includes/home/heading/index
++section-color-transition('purple-to-white')
 
-  body
-    main
-      include nav.pug
+include _includes/home/about/index
++section-color-transition('white-to-mint')
 
-      include home/index
-      +section-color-transition('purple-to-white')
+include _includes/home/team/index
++section-color-transition('mint-to-white')
 
-      include about/index
-      +section-color-transition('white-to-mint')
-
-      include team/index
-      +section-color-transition('mint-to-white')
-
-      include listen/index
-      +section-color-transition('white-to-purple')
-
-      include footer/index
-
-script(src="not-a-react-bundle.js" defer)
-if env === 'dev'
-  script(src="http://localhost:" + liveReloadPort + "/livereload.js?snipver=1")
+include _includes/home/listen/index
++section-color-transition('white-to-purple')

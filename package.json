@@ -1,23 +1,20 @@
 {
-  "name": "impact-podcast",
+  "name": "bytes-of-good",
   "version": "1.0.0",
-  "description": "",
-  "main": "build.js",
+  "description": "Static site for Bytes of Good marketing + browsing archives",
+  "main": ".eleventy.js",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "eleventy-plugin-sass": "^1.1.1",
+    "jstransformer-markdown-it": "^2.1.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "(MODE=dev node build.js) & serve public -l 3000",
-    "build": "node build.js"
+    "start": "eleventy --serve --port=3000",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "pug": "^3.0.0",
-    "rollup": "^2.18.1",
-    "sass": "^1.26.10",
-    "jstransformer-markdown-it": "^2.1.0"
-  },
-  "devDependencies": {
-    "livereload": "^0.9.1",
-    "serve": "^11.3.2"
-  }
+  "license": "ISC"
 }

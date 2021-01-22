@@ -1,19 +1,48 @@
-<h1 align="center">Welcome to the Impact Pod landing page 👋</h1>
+<h1 align="center">The Bytes of Good landing site 📣</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="#" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
+  <a href="https://app.netlify.com/sites/bytesofgood/deploys" target="_blank" rel="noreferrer">
+    <img src="https://api.netlify.com/api/v1/badges/612768b0-7a88-4d1b-a32a-7c7cf5b8f7da/deploy-status" alt="Netlify Status" />
   </a>
-  <a href="https://twitter.com/bholmesdev" target="_blank">
-    <img alt="Twitter: bholmesdev" src="https://img.shields.io/twitter/follow/bholmesdev.svg?style=social" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="#" target="_blank" rel="noreferrer">
+    <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
   </a>
 </p>
 
-> The bare-bones, [Pug-driven](https://pugjs.org) landing page for the incredible Impact Podcast ✨
+> The bare-bones, [Pug-driven](https://pugjs.org) landing page for the incredible Bytes of Good org ✨
 
-### 🚀 [Visit the live site](impactpodcast.hack4impact.org)
+🚀 [**Visit the live site**](impactpodcast.hack4impact.org)
+
+## Tech stack
+
+This project uses [**Eleventy**](https://11ty.dev) for development and production builds. If you've ever used [Jekyll](https://jekyllrb.com) (maybe for building sites on GitHub pages), this is super similar! The only _real_ difference is using JavaScript packages for all our plugins instead of Ruby. This makes setup a lot simpler across devices from our experience.
+
+For the pages themselves, we use a combination of [Pug / Jade templates](https://pugjs.org/api/getting-started.html) and [Scss](https://sass-lang.com) for our styles. No, we don't use bootstrap or any other CSS library! We write our CSS with our bare hands 💪
+
+## Project structure
+
+```
+src/ -> all our assets, pug templates, scripts, and styles
+| 🗄 _assets -> images, fonts, etc copied directly to build/
+| 📶 _data -> global data pulled in from the Contentful CMS
+| 📦 _includes -> pug templates and SVG assets imported into pages
+| 💅 _sass -> sass files loaded into your HTML templates
+  | _imports -> sass files that are imported, *not* copied directly to build/
+| 🚏 [route files] -> templates outside _includes = *routes* on our site
+build/ -> generated from src/ when running build commands
+```
+
+### Some important frontmatter properties
+
+If you open a page like `src/index.pug` you'll notice some variables assigned between some `---`s. These are called [frontmatter](https://www.11ty.dev/docs/data-frontmatter/) properties:
+
+- `title` - the page title displayed in your browser's tab.
+- `layout` - the name of the Pug template file to use as a "wrapper" around the page. For example, `layout: layout` points to the `_includes/layout.pug` file.
+- `styles` - any page-specific styles to load from the `_sass` directory. For example, `styles: home` points to the `_sass/home.scss` file.
 
 ## Install Dependencies
+
+Make sure you have [NodeJS](https://nodejs.org/en/) installed first. Then, run this terminal command inside the project directory:
 
 ```sh
 npm install
@@ -25,7 +54,7 @@ npm install
 npm start
 ```
 
-This will spin up a local development server (using [Vercel's serve](https://github.com/vercel/serve)) with live reloading for file changes.
+This will spin up a local development server (using [Browsersync](https://browsersync.io)) with live reloading on file changes.
 
 ## Build for production
 
@@ -33,9 +62,9 @@ This will spin up a local development server (using [Vercel's serve](https://git
 npm run build
 ```
 
-This should create a `bundle.js`, `styles.css`, and some static HTML files in the `/public` directory, without creating the dev server.
+This should create a `build/` directory that we'll serve using the [Netlify](https://www.netlify.com) deploy service. Just **don't edit any of these files directly!** These files are generated from `src/`, so make all your edits in there.
 
-## Author
+## Contributors
 
 👤 **Ben Holmes**
 
