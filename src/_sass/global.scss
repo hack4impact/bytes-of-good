@@ -1,10 +1,6 @@
-@import 'nav.scss';
-@import 'home/heading.scss';
-@import 'home/about.scss';
-@import 'home/team.scss';
-@import 'home/listen.scss';
-@import 'footer.scss';
-@import 'variables.scss';
+@import '_imports/nav.scss';
+@import '_imports/footer.scss';
+@import '_imports/variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Varela+Round&display=swap');
 
 html {
@@ -14,12 +10,6 @@ html {
 
 * {
   box-sizing: border-box;
-}
-
-h1,
-h2,
-h3 {
-  font-weight: bold;
 }
 
 body {
@@ -40,6 +30,7 @@ h1,
 h2,
 h3 {
   font-family: $header-font;
+  font-weight: bold;
 }
 
 h1 {

@@ -22,14 +22,23 @@ For the pages themselves, we use a combination of [Pug / Jade templates](https:/
 ## Project structure
 
 ```
-src/ -> all our assets, templates, scripts, and styles
+src/ -> all our assets, pug templates, scripts, and styles
 | 🗄 _assets -> images, fonts, etc copied directly to build/
 | 📶 _data -> global data pulled in from the Contentful CMS
-| 📦 _includes -> templates and SVG assets imported into pages
-| 💅 _sass -> global styles, with styles.scss as the main source of truth
+| 📦 _includes -> pug templates and SVG assets imported into pages
+| 💅 _sass -> sass files loaded into your HTML templates
+  | _imports -> sass files that are imported, *not* copied directly to build/
 | 🚏 [route files] -> templates outside _includes = *routes* on our site
 build/ -> generated from src/ when running build commands
 ```
+
+### Some important frontmatter properties
+
+If you open a page like `src/index.pug` you'll notice some variables assigned between some `---`s. These are called [frontmatter](https://www.11ty.dev/docs/data-frontmatter/) properties:
+
+- `title` - the page title displayed in your browser's tab.
+- `layout` - the name of the Pug template file to use as a "wrapper" around the page. For example, `layout: layout` points to the `_includes/layout.pug` file.
+- `styles` - any page-specific styles to load from the `_sass` directory. For example, `styles: home` points to the `_sass/home.scss` file.
 
 ## Install Dependencies
 
