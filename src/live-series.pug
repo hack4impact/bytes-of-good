@@ -1,0 +1,24 @@
+---
+title: Live series
+layout: layout
+styles: podcast
+---
+
+include _includes/vectors.pug
+
+.purple-background
+  section.heading
+    h1
+      span.title Bytes of Good
+      include _includes/heart-logo.svg
+      span.green Live
+    p We cover topics across the social impact spectrum, with incredible guests like Pablo Sarmiento. Catch our latest episode below!
+  +section-color-transition('purple-to-white')
+
+section.episodes
+  each broadcast in liveBroadcasts
+    article.episode-card
+      time(datetime=broadcast.publishedOn.date) #{broadcast.publishedOn.formattedDate}
+      h2
+        a(href=broadcast.youtubeLink target="_blank" rel="noreferrer") #{broadcast.title}
+      | !{broadcast.description}
