@@ -1,0 +1,13 @@
+---
+title: Podcast
+layout: layout
+styles: podcast
+---
+
+section.episodes
+  each episode in episodes
+    article.episode-card
+      time(datetime=episode.publishedOn.date) #{episode.publishedOn.formattedDate}
+      h2
+        a(href=episode.listenLink) #{episode.title}
+      | !{episode.description}
