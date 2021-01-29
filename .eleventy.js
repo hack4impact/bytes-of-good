@@ -1,7 +1,9 @@
 const pluginSass = require('eleventy-plugin-sass')
+const dotenv = require('dotenv')
 const base = 'src/'
 
 module.exports = function (eleventyConfig) {
+  dotenv.config()
   // treat styles.scss as the source of truth for styles across the site
   // this should import all other styles!
   eleventyConfig.addPlugin(pluginSass, {
