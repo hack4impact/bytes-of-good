@@ -8,7 +8,6 @@ const fetch = require('node-fetch')
 // From here, you'll be able to explore all of the existing content
 // https://www.electronjs.org/apps/graphiql
 module.exports = async function fetchContent(query) {
-  console.log({ space, accessToken })
   try {
     const res = await fetch(
       `https://graphql.contentful.com/content/v1/spaces/${space}/environments/master`,
