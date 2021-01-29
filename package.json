@@ -8,7 +8,11 @@
     "eleventy-plugin-sass": "^1.1.1",
     "jstransformer-markdown-it": "^2.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@contentful/rich-text-html-renderer": "^14.1.2",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  },
   "scripts": {
     "start": "eleventy --serve --port=3000",
     "build": "eleventy",
