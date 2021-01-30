@@ -1,12 +1,12 @@
+mixin link(href)
+  li(class=page.url==href ? 'active' : '')
+    a(href=href)
+      block
+
 nav
   ul
-    li
-      a(href='#home') 
-        img(src="images/globe-logo.svg")
-    li
-      a(href='/') Home
-    li 
-      a(href='/podcast') Podcast
-    li 
-      a(href='/live-series') Live series
-  
+    +link('/')
+      img(src="/images/globe-logo.svg")
+    +link('/') About
+    +link('/podcast/') Podcast
+    +link('/live-series/') Live series
