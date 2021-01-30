@@ -107,4 +107,8 @@ section {
   padding: 120px 30px;
   position: relative;
   scroll-margin-top: 5rem;
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 80px 20px;
+  }
 }

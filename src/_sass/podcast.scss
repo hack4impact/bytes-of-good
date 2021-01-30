@@ -6,6 +6,10 @@ section {
 
 .heading {
   color: white;
+  @media (max-width: $mobile-breakpoint) {
+    text-align: center;
+  }
+
   a,
   a:visited {
     color: $mint;
@@ -24,6 +28,7 @@ section {
 
     svg {
       height: 0.8em;
+      width: auto;
       vertical-align: baseline;
       margin-bottom: -0.05em;
     }
@@ -33,7 +38,7 @@ section {
     }
 
     @media (max-width: $mobile-breakpoint) {
-      font-size: 40px;
+      font-size: 44px;
     }
   }
 }
@@ -44,13 +49,14 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   .episode-card {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 30px #0004;
     padding: 16px 24px;
     font-size: 18px;
-    margin: 20px;
+    margin-bottom: 40px;
     position: relative;
     overflow: hidden;
 
@@ -63,6 +69,10 @@ section {
 
     h2 {
       font-size: 36px;
+
+      @media (max-width: $mobile-breakpoint) {
+        font-size: 28px;
+      }
 
       a,
       a:visited {

@@ -52,10 +52,6 @@ nav {
     margin: 0;
     padding: 0;
 
-    @media (max-width: $mobile-breakpoint) {
-      justify-content: space-between;
-    }
-
     li {
       margin: 0 30px;
       display: flex;
@@ -63,7 +59,12 @@ nav {
       position: relative;
 
       @media (max-width: 500px) {
-        margin: 0 12px;
+        margin: 0;
+        margin-right: 20px;
+
+        &:first-of-type {
+          margin-left: 20px;
+        }
       }
 
       &:first-of-type {
