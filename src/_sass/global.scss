@@ -101,6 +101,29 @@ button {
   z-index: -1;
 }
 
+.cta-link,
+.cta-link:visited {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  color: $purple;
+  background: $mint;
+  font-family: $header-font;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 18px 60px;
+  transition: box-shadow 0.2s, transform 0.2s;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: 20px;
+  }
+
+  &:hover {
+    box-shadow: $cta-drop-shadow;
+    transform: translateY(-5px);
+  }
+}
+
 section {
   max-width: $content-max-width;
   margin: auto;

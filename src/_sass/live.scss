@@ -1,0 +1,23 @@
+@import '_imports/variables.scss';
+@import '_imports/episode-page.scss';
+
+.heading {
+  padding-top: 60px;
+
+  .video-embed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    iframe {
+      width: clamp(320px, 80vw, 80%);
+      height: clamp(320px, 60vw, 400px);
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding-bottom: 120px;
+  }
+}

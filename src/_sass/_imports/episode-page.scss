@@ -1,0 +1,112 @@
+@import '_imports/variables.scss';
+
+section {
+  max-width: 1000px;
+}
+
+.heading {
+  color: white;
+  @media (max-width: $mobile-breakpoint) {
+    text-align: center;
+  }
+
+  p {
+    a,
+    a:visited {
+      color: $mint;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  h1 {
+    font-size: 56px;
+
+    span.title {
+      margin-right: 0.3em;
+    }
+
+    svg {
+      height: 0.8em;
+      width: auto;
+      vertical-align: baseline;
+      margin-bottom: -0.05em;
+    }
+
+    span.green {
+      color: $mint;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 44px;
+    }
+  }
+}
+
+.episodes {
+  padding-top: 0;
+  margin-top: -10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .episode-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px #0004;
+    padding: 16px 24px;
+    font-size: 18px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+
+    time {
+      padding: 3px 20px;
+      font-family: $header-font;
+      background: $mint;
+      border-radius: 25px;
+    }
+
+    h2 {
+      font-size: 36px;
+
+      @media (max-width: $mobile-breakpoint) {
+        font-size: 28px;
+      }
+
+      a,
+      a:visited {
+        text-decoration: none;
+        color: $black;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: $purple;
+      }
+      // the purple stripe on the top-right of every podcast episode
+      a::before {
+        content: '';
+        background: linear-gradient(45deg, white 50%, $purple 50%);
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        top: 0;
+        right: 0;
+      }
+      // the "play" button icon in the top-right
+      a::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        background: white;
+        // draw a triangle with a clip-path
+        clip-path: polygon(20% 0, 20% 100%, 100% 50%);
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ---
 title: Live series
 layout: layout
-styles: podcast
+styles: live
 ---
 
 include _includes/vectors.pug
@@ -13,10 +13,15 @@ include _includes/vectors.pug
       include _includes/heart-logo.svg
       span.green Live
     p We cover topics across the social impact spectrum, with incredible guests like Pablo Sarmiento. Catch our latest episode below!
+
+    .video-embed
+      iframe(width="560" height="315" src="https://www.youtube-nocookie.com/embed/rHE6YDMveRo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      a.cta-link(href=rsvpLink) RSVP for the next broadcast
+
   +section-color-transition('purple-to-white')
 
 section.episodes
-  each broadcast in liveBroadcasts
+  each broadcast in pastBroadcasts
     article.episode-card
       time(datetime=broadcast.publishedOn.date) #{broadcast.publishedOn.formattedDate}
       h2
