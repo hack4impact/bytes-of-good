@@ -50,12 +50,14 @@
       margin: auto;
     }
 
-    .cta-link {
-      box-shadow: $cta-drop-shadow;
-      position: absolute;
-      bottom: -40px;
-      left: 15%;
-      right: 15%;
+    @media (max-width: 400px) {
+      .cta-link {
+        box-shadow: $cta-drop-shadow;
+        position: absolute;
+        bottom: -40px;
+        left: 15%;
+        right: 15%;
+      }
     }
   }
 
