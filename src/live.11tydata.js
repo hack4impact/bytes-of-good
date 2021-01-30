@@ -26,12 +26,13 @@ module.exports = async function liveBroadcasts() {
   const upcomingBroadcasts = upcomingBroadcastCollection?.items ?? []
   const pastBroadcasts = pastBroadcastCollection?.items ?? []
 
-  console.log(upcomingBroadcasts)
-
   return {
+    // grab the RSVP link from the first upcoming broadcast
+    // there should only be 1 upcoming at a time!
     rsvpLink: upcomingBroadcasts[0]?.rsvpLink,
     pastBroadcasts: formatEpisodeContent(pastBroadcasts),
     youtubeEmbedLink:
+      // format the YouTube link for a cookie-free embed
       pastBroadcasts[0]?.youtubeLink?.replace(
         '.com/watch?v=',
         '-nocookie.com/embed/'

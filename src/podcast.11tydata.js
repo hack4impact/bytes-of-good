@@ -3,7 +3,7 @@ const formatEpisodeContent = require('../utils/format-episode-content')
 
 module.exports = async function episodes() {
   const { episodeCollection } = await fetchContent(`{
-    episodeCollection {
+    episodeCollection(order: publishedOn_DESC) {
       items {
         title
         description {

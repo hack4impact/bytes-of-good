@@ -8,6 +8,15 @@
     margin-bottom: 0.5em;
   }
 
+  p {
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    @media (mobile-breakpoint) {
+      font-size: 14px;
+    }
+  }
+
   .video-embed {
     display: flex;
     flex-direction: column;
