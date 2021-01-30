@@ -24,6 +24,10 @@ body {
 main {
   margin-top: $nav-height;
   overflow: hidden;
+
+  @media (max-width: $mobile-breakpoint) {
+    margin-top: $mobile-nav-height;
+  }
 }
 
 h1,
