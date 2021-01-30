@@ -109,5 +109,42 @@
         clip-path: polygon(20% 0, 20% 100%, 100% 50%);
       }
     }
+
+    p {
+      margin-bottom: 36px;
+    }
+
+    .guests {
+      display: flex;
+      flex-wrap: wrap;
+      a,
+      a:visited {
+        display: inline;
+        background: #efefef;
+        border-radius: 30px;
+        font-size: 14px;
+        color: $black;
+        padding: 5px;
+        padding-right: 16px;
+        display: flex;
+        align-items: center;
+        transition: box-shadow 0.1s, transform 0.2s;
+        text-decoration: none;
+        font-family: $header-font;
+        margin-right: 8px;
+
+        &:hover {
+          box-shadow: 0 5px 10px #ccc;
+          transform: translateY(-3px);
+        }
+
+        img {
+          width: 2em;
+          height: 2em;
+          margin-right: 10px;
+          border-radius: 100%;
+        }
+      }
+    }
   }
 }

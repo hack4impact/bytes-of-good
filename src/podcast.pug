@@ -23,3 +23,8 @@ section.episodes
       h2
         a(href=episode.listenLink target="_blank" rel="noreferrer") #{episode.title}
       | !{episode.description}
+      .guests
+        each profile in episode.guestsCollection.items
+          a(href=profile.linkedIn || profile.twitter target="_blank" rel="noreferrer")
+            img(src=profile.image.url alt=profile.image.description)
+            span #{profile.name}

@@ -16,7 +16,8 @@ include _includes/vectors.pug
     :markdown-it
       We cover topics across the social impact spectrum, with inspirational visits from [Coding it Forward](https://codingitforward.com), the [Thoughtful Technology Project](https://thoughtfultech.org), and more. Catch our last broadcast below!
 
-    a.cta-link(href=rsvpLink) RSVP for the next broadcast
+    if rsvpLink
+      a.cta-link(href=rsvpLink) RSVP for the next broadcast
 
   +section-color-transition('purple-to-white')
 
@@ -30,3 +31,8 @@ section.episodes
       h2
         a(href=broadcast.youtubeLink target="_blank" rel="noreferrer") #{broadcast.title}
       | !{broadcast.description}
+      .guests
+        each profile in broadcast.guestsCollection.items
+          a(href=profile.linkedIn || profile.twitter target="_blank" rel="noreferrer")
+            img(src=profile.image.url alt=profile.image.description)
+            span #{profile.name}
