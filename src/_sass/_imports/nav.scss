@@ -1,15 +1,5 @@
 @import 'variables.scss';
 
-@media (max-width: $mobile-breakpoint) {
-  $mobile-nav-height: 60px;
-  nav {
-    height: $mobile-nav-height;
-  }
-  main {
-    margin-top: $mobile-nav-height;
-  }
-}
-
 nav {
   height: $nav-height;
   z-index: 1;
@@ -23,7 +13,7 @@ nav {
 
   @media (max-width: $mobile-breakpoint) {
     font-size: 16px;
-    height: 60px;
+    height: $mobile-nav-height;
   }
 
   display: flex;
