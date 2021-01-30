@@ -32,7 +32,9 @@ module.exports = async function liveBroadcasts() {
     rsvpLink: upcomingBroadcasts[0]?.rsvpLink,
     pastBroadcasts: formatEpisodeContent(pastBroadcasts),
     youtubeEmbedLink:
-      pastBroadcasts[0]?.youtubeEmbedLink ??
-      'https://www.youtube.com/watch?v=vzMcV9JTgMw',
+      pastBroadcasts[0]?.youtubeLink?.replace(
+        '.com/watch?v=',
+        '-nocookie.com/embed/'
+      ) ?? 'https://www.youtube-nocookie.com/embed/rHE6YDMveRo',
   }
 }
