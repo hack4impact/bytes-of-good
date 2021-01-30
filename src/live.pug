@@ -13,20 +13,20 @@ include _includes/vectors.pug
       span.logos
         include _includes/heart-logo.svg
         include _includes/live-logo.svg
-    p
-      :markdown-it
-        We cover topics across the social impact spectrum, with inspirational visits from [Coding it Forward](https://codingitforward.com), the [Thoughtful Technology Project](https://thoughtfultech.org), and more. Catch our last broadcast below!
+    :markdown-it
+      We cover topics across the social impact spectrum, with inspirational visits from [Coding it Forward](https://codingitforward.com), the [Thoughtful Technology Project](https://thoughtfultech.org), and more. Catch our last broadcast below!
 
-    .video-embed
-      iframe(width="560" height="315" src=youtubeEmbedLink frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-      a.cta-link(href=rsvpLink) RSVP for the next broadcast
+    a.cta-link(href=rsvpLink) RSVP for the next broadcast
 
   +section-color-transition('purple-to-white')
 
 section.episodes
-  each broadcast in pastBroadcasts
+  each broadcast, index in pastBroadcasts
     article.episode-card
       time(datetime=broadcast.publishedOn.date) #{broadcast.publishedOn.formattedDate}
+      if index == 0
+        .video-embed
+          iframe(width="560" height="315" src=youtubeEmbedLink frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
       h2
         a(href=broadcast.youtubeLink target="_blank" rel="noreferrer") #{broadcast.title}
       | !{broadcast.description}

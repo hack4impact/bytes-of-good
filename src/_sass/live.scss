@@ -3,9 +3,13 @@
 
 .heading {
   padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h1 {
     margin-bottom: 0.5em;
+    width: 100%;
 
     .logos {
       display: inline-block;
@@ -19,27 +23,27 @@
 
   p {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 36px;
 
     @media (mobile-breakpoint) {
       font-size: 14px;
     }
   }
 
-  .video-embed {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
-    iframe {
-      width: clamp(320px, 80vw, 80%);
-      height: clamp(320px, 60vw, 400px);
-      margin-bottom: 40px;
-    }
-  }
-
   @media (max-width: $mobile-breakpoint) {
     padding-bottom: 120px;
+  }
+}
+
+.video-embed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0;
+
+  iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: clamp(320px, 60vw, 400px);
   }
 }
