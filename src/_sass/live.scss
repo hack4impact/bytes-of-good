@@ -6,6 +6,15 @@
 
   h1 {
     margin-bottom: 0.5em;
+
+    .logos {
+      display: inline-block;
+
+      svg:nth-child(2) {
+        height: 1.4em;
+        vertical-align: bottom;
+      }
+    }
   }
 
   p {
