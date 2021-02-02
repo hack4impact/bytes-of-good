@@ -11,7 +11,7 @@ module.exports = async function liveBroadcasts() {
         rsvpLink
       }
     }
-    pastBroadcastCollection: liveBroadcastCollection(where: {upcoming: false}, order: publishedOn_DESC, limit: 50) {
+    pastBroadcastCollection: liveBroadcastCollection(where: {upcoming: false}, order: publishedOn_DESC) {
       items {
         title
         description {
@@ -19,7 +19,7 @@ module.exports = async function liveBroadcasts() {
         }
         publishedOn
         youtubeLink
-        guestsCollection {
+        guestsCollection(limit: 10) {
           items {
             image {
               url
