@@ -1,0 +1,28 @@
+---
+title: Podcast
+layout: layout
+styles: podcast
+---
+
+include _includes/vectors.pug
+include _includes/episode.pug
+
+.purple-background
+  section.heading
+    h1
+      span.title Bytes of Good
+      include _includes/heart-logo.svg
+      span.green Podcast
+    :markdown-it
+      We cover topics across the social impact spectrum, with incredible guests like Pablo Sarmiento. [Follow us on Spotify](https://open.spotify.com/show/1TNQDtwII6Uv5ojtkOQ7xh) to catch the next episode!
+  +section-color-transition('purple-to-white')
+
+section.episodes
+  each episode in episodes
+    +episode(
+      episode.publishedOn,
+      episode.listenLink,
+      episode.title,
+      episode.description,
+      episode.guestsCollection.items
+    )

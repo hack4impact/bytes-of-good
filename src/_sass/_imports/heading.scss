@@ -50,33 +50,13 @@
       margin: auto;
     }
 
-    .cta-link,
-    .cta-link:visited {
-      text-decoration: none;
-      display: inline-block;
-      font-size: 28px;
-      color: $purple;
-      background: $mint;
-      font-family: $header-font;
-      font-weight: bold;
-      border-radius: 50px;
-      padding: 18px 60px;
-      transition: box-shadow 0.2s, transform 0.2s;
-
-      $drop-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-
-      @media (max-width: $mobile-breakpoint) {
-        box-shadow: $drop-shadow;
-        font-size: 20px;
+    @media (max-width: 400px) {
+      .cta-link {
+        box-shadow: $cta-drop-shadow;
         position: absolute;
         bottom: -40px;
         left: 15%;
         right: 15%;
-      }
-
-      &:hover {
-        box-shadow: $drop-shadow;
-        transform: translateY(-5px);
       }
     }
   }

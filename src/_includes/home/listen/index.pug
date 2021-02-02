@@ -2,14 +2,17 @@ section#listen
   div
     hgroup
       h2 Listen in
-      h3 Hear about the next pod!
-    p We just launched our pilot episode, and we're super excited to share new content with you. Sign up for the newsletter to hear about show notes and future uploads.
-    form.input-box(action="https://bytesofgood.us17.list-manage.com/subscribe/post?u=f13e34662dc94ce7ae94e55bf&amp;id=e93f6c8f61" method="post")
-      input(type="email" name="EMAIL" required placeholder="johnnydogooder@tech.club")
-      button(type="submit") Sign up
-    a.listen-now(target="_blank" href="https://open.spotify.com/show/1TNQDtwII6Uv5ojtkOQ7xh?si=KpP3UqptSGCO86Jr5Mn7rA")
-      +icon("spotify")
-      | And listen to Ep.1, out now on Spotify!
+      h3 Catch us live!
+    p We post all our podcasts over on Spotify, and broadcast our "live series" interviews on YouTube. 
+      if rsvpLink
+        | #[a(href=rsvpLink) RSVP to our next live broadcast] to join the discussion!
+    .cta-container
+      a(href="/podcast")
+        include megaphone.svg
+        span Listen in to the podcast
+      a(href="/live")
+        include video-camera.svg
+        span Watch the latest broadcasts
 
   .graphic   
     include vector.svg

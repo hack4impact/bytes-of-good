@@ -1,0 +1,36 @@
+---
+title: Live series
+layout: layout
+styles: live
+---
+
+include _includes/vectors.pug
+include _includes/episode.pug
+
+.purple-background
+  section.heading
+    h1
+      span.title Bytes of Good
+      span.logos
+        include _includes/heart-logo.svg
+        include _includes/live-logo.svg
+    :markdown-it
+      We cover topics across the social impact spectrum, with inspirational visits from [Coding it Forward](https://codingitforward.com), the [Thoughtful Technology Project](https://thoughtfultech.org), and more. Catch our last broadcast below!
+
+    if rsvpLink
+      a.cta-link(href=rsvpLink) RSVP for the next broadcast
+
+  +section-color-transition('purple-to-white')
+
+section.episodes
+  each episode, index in pastBroadcasts
+    +episode(
+      episode.publishedOn,
+      episode.youtubeLink,
+      episode.title,
+      episode.description,
+      episode.guestsCollection.items
+    )
+      if index == 0
+        .video-embed
+          iframe(width="560" height="315" src=youtubeEmbedLink frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
