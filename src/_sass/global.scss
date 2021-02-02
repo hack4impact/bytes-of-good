@@ -85,6 +85,17 @@ button {
   cursor: pointer;
 }
 
+a,
+a:visited {
+  color: $purple;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $mint;
+  }
+}
+
 .purple-background {
   background-color: $purple;
 }
