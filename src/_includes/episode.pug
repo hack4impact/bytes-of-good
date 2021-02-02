@@ -1,0 +1,12 @@
+mixin episode(publishedOn, listenLink, title, description, guests)
+  article.episode-card
+      time(datetime=publishedOn.date) #{publishedOn.formattedDate}
+      h2
+        a(href=listenLink target="_blank" rel="noreferrer") #{title}
+      block
+      | !{description}
+      .guests
+        each guest in guests
+          a(href=guest.linkedIn || guest.twitter target="_blank" rel="noreferrer")
+            img(src=guest.image.url alt=guest.image.description height="30" width="30")
+            span #{guest.name}

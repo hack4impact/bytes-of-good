@@ -11,9 +11,24 @@ module.exports = async function episodes() {
         }
         publishedOn
         listenLink
+        guestsCollection(limit: 10) {
+          items {
+            image {
+              url
+              description
+            }
+            name
+            linkedIn
+            twitter
+          }
+        }
       }
     }
   }`)
+
+  if (!episodeCollection?.items?.length) {
+    throw 'There was a problem fetching episode data'
+  }
 
   return {
     episodes: formatEpisodeContent(episodeCollection?.items),

@@ -19,12 +19,27 @@ module.exports = async function liveBroadcasts() {
         }
         publishedOn
         youtubeLink
+        guestsCollection(limit: 10) {
+          items {
+            image {
+              url
+              description
+            }
+            name
+            linkedIn
+            twitter
+          }
+        }
       }
     }
   }`)
 
   const upcomingBroadcasts = upcomingBroadcastCollection?.items ?? []
   const pastBroadcasts = pastBroadcastCollection?.items ?? []
+
+  if (!upcomingBroadcasts.length || !pastBroadcasts.length) {
+    throw 'There was a problem fetching episode data'
+  }
 
   return {
     // grab the RSVP link from the first upcoming broadcast

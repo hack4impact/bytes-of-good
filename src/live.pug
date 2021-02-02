@@ -5,6 +5,7 @@ styles: live
 ---
 
 include _includes/vectors.pug
+include _includes/episode.pug
 
 .purple-background
   section.heading
@@ -16,17 +17,20 @@ include _includes/vectors.pug
     :markdown-it
       We cover topics across the social impact spectrum, with inspirational visits from [Coding it Forward](https://codingitforward.com), the [Thoughtful Technology Project](https://thoughtfultech.org), and more. Catch our last broadcast below!
 
-    a.cta-link(href=rsvpLink) RSVP for the next broadcast
+    if rsvpLink
+      a.cta-link(href=rsvpLink) RSVP for the next broadcast
 
   +section-color-transition('purple-to-white')
 
 section.episodes
-  each broadcast, index in pastBroadcasts
-    article.episode-card
-      time(datetime=broadcast.publishedOn.date) #{broadcast.publishedOn.formattedDate}
+  each episode, index in pastBroadcasts
+    +episode(
+      episode.publishedOn,
+      episode.listenLink,
+      episode.title,
+      episode.description,
+      episode.guestsCollection.items
+    )
       if index == 0
         .video-embed
           iframe(width="560" height="315" src=youtubeEmbedLink frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
-      h2
-        a(href=broadcast.youtubeLink target="_blank" rel="noreferrer") #{broadcast.title}
-      | !{broadcast.description}
