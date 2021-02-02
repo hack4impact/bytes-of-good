@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 html(lang="en-US")
+  - var ogtitle = title ? title : "Bytes of Good"
+  - var ogdescription = "A podcast on the underserved intersection of tech and social good. Listen now on Spotify!"
   head
-    title #{title ? title : "Bytes of Good"}
+    title #{ogtitle}
     link(rel="stylesheet" href="/global.css")
     if styles
       link(rel="stylesheet" href="/" + styles + ".css")
     link(rel="icon" type="img/png" href="images/favicon.png")
     meta(name='viewport' content='width=device-width,initial-scale=1.0')
 
-
-    meta(rel="stylesheet")
-
     meta(name="twitter:card" content="summary_large_image")
     meta(name="twitter:site" content="@impactlabs_io")
-    meta(name="description" content="A podcast on the underserved intersection of tech and social good. Listen now on Spotify!")
+    meta(name="description" content=ogdescription)
     meta(property="og:url" content='https://bytesofgood.org')
     meta(property="og:image" content='https://bytesofgood.org/images/og-image.jpg')
     meta(property="og:image:width" content="1200")
     meta(property="og:image:height" content="630")
     meta(property="og:site_name" content="Bytes of Good")
-    meta(property="og:title" content="Bytes of Good Podcast")
-    meta(property="og:description" content="A podcast on the underserved intersection of tech and social good. Listen now on Spotify!")
+    meta(property="og:title" content=title)
+    meta(property="og:description" content=ogdescription)
 
 
   body
