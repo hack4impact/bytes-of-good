@@ -130,6 +130,7 @@ a:visited {
   }
 
   &:hover {
+    color: $purple;
     box-shadow: $cta-drop-shadow;
     transform: translateY(-5px);
   }
