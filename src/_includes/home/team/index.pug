@@ -7,14 +7,16 @@ include ../../vectors.pug
       h3 Meet the star-studded cast
 
     .team-members
-      each member in team
+      each member in teamMembers
         .member
           .member-img
             .img-wrapper
-              img(src='/images/team/' + member.image)
+              img(src=member.image.url alt=member.name height="250" width="250")
             h3 #{member.name} 
-          p.description #{member.description}
-          each socialLink in member.socialLinks
-            a.social-link(target="_blank" href=socialLink.href
-                          aria-label=member.name + ' ' + socialLink.name)
-              +icon(socialLink.name)
+          p.description #{member.jobTitle}
+          if member.twitter
+            a.social-link(href=member.twitter target="_blank" rel="noreferrer" aria-label="Twitter")
+              +icon("twitter")
+          if member.linkedIn
+            a.social-link(href=member.linkedIn target="_blank" rel="noreferrer" aria-label="LinkedIn")
+              +icon("linkedin")
