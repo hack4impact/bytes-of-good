@@ -37,8 +37,8 @@ module.exports = async function liveBroadcasts() {
   const upcomingBroadcasts = upcomingBroadcastCollection?.items ?? []
   const pastBroadcasts = pastBroadcastCollection?.items ?? []
 
-  if (!upcomingBroadcasts.length || !pastBroadcasts.length) {
-    throw 'There was a problem fetching episode data'
+  if (!pastBroadcasts.length) {
+    throw 'There was a problem fetching past live broadcasts'
   }
 
   return {
