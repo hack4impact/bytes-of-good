@@ -1,6 +1,10 @@
 /* Trigger the floating icon animations in the home section */
 const floatingIcons = document.querySelectorAll('#home svg.floating-icon')
-const navElement = document.querySelector('nav')
+const navElement = document.getElementById('main-nav')
+const headerElement = document.querySelector('header')
+const mobileDropdownToggleElement = document.getElementById(
+  'mobile-dropdown-toggle'
+)
 
 const wait = (callback, timeout) =>
   new Promise((resolve) => {
@@ -18,8 +22,19 @@ for (let [index, floatingIcon] of floatingIcons.entries()) {
 
 document.addEventListener('scroll', (e) => {
   if (window.scrollY > 60) {
-    navElement.classList.add('white')
+    headerElement.classList.add('white')
   } else {
-    navElement.classList.remove('white')
+    headerElement.classList.remove('white')
+  }
+})
+
+document.addEventListener('click', (event) => {
+  if (
+    mobileDropdownToggleElement === event.target ||
+    mobileDropdownToggleElement.contains(event.target)
+  ) {
+    // when we click our button, toggle a CSS class!
+    console.log({ navElement })
+    navElement.classList.toggle('dropdown-opened')
   }
 })
