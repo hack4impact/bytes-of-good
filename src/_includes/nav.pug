@@ -1,12 +1,17 @@
 mixin link(href)
-  li(class=page.url==href ? 'active' : '')
-    a(href=href)
-      block
+  a(class=page.url==href ? 'active' : '' href=href)
+    block
 
-nav
-  ul
+header
+  nav#main-nav
     +link('/')
       img(src="/images/globe-logo.svg")
-    +link('/') About
-    +link('/podcast/') Podcast
-    +link('/live/') Live series
+    .dropdown-link-container
+      +link('/') About
+      +link('/podcast/') Podcast
+      +link('/live/') Live series
+      +link('https://bytesofgood.substack.com/p/coming-soon?r=oz23g&utm_campaign=post&utm_medium=web&utm_source=copy') Newsletter
+    button#mobile-dropdown-toggle(aria-hidden="true")
+      .stripe-top
+      .stripe-middle
+      .stripe-bottom
