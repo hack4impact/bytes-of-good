@@ -14,7 +14,10 @@ include _includes/episode.pug
       include _includes/heart-logo.svg
       span.green Podcast
     :markdown-it
-      We cover topics across the social impact spectrum, with incredible guests like Pablo Sarmiento. [Follow us on Spotify](https://open.spotify.com/show/1TNQDtwII6Uv5ojtkOQ7xh) to catch the next episode!
+      We cover topics across the social impact spectrum, with **incredible guests from all walks of life**. [Follow us on Spotify](https://open.spotify.com/show/1TNQDtwII6Uv5ojtkOQ7xh) to catch the next episode!
+    .shownotes
+      a(href="https://docs.google.com/document/d/1RABc9DFJ6s3y9JeHUW9mBiS_UfAc4ZW26FKPBzJ1Kac/edit" target="_blank" rel="noreferrer")
+        span Check out our Show Notes for Summaries, Resources, and More!
   +section-color-transition('purple-to-white')
 
 section.episodes
@@ -24,5 +27,6 @@ section.episodes
       episode.listenLink,
       episode.title,
       episode.description,
-      episode.guestsCollection.items
+      episode.guestsCollection.items,
+      episode.transcriptLink
     )

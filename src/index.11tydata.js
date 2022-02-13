@@ -17,6 +17,7 @@ module.exports = async function liveBroadcasts() {
           }
           twitter
           linkedIn
+          active
         }
       }  
     }

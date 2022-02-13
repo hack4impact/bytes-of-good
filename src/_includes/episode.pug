@@ -1,8 +1,13 @@
-mixin episode(publishedOn, listenLink, title, description, guests)
+mixin episode(publishedOn, listenLink, title, description, guests, transcriptLink)
   article.episode-card
       time(datetime=publishedOn.date) #{publishedOn.formattedDate}
       h2
         a(href=listenLink target="_blank" rel="noreferrer") #{title}
+      if(transcriptLink)
+        .transcript
+          a(href=transcriptLink target="_blank")
+            include transcript.svg
+            span Transcript
       block
       | !{description}
       .guests
