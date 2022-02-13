@@ -6,6 +6,7 @@ mixin episode(publishedOn, listenLink, title, description, guests, transcriptLin
       if(transcriptLink)
         .transcript
           a(href=transcriptLink target="_blank")
+            include transcript.svg
             span Transcript
       block
       | !{description}

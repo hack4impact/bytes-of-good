@@ -155,7 +155,7 @@
         border-radius: 30px;
         font-size: 14px;
         color: $black;
-        padding: 10px 15px 10px 15px;
+        padding: 10px 15px 7px 15px;
         // padding-right: 16px;
         display: flex;
         align-items: center;
@@ -168,6 +168,11 @@
           box-shadow: 0 5px 10px #ccc;
           transform: translateY(-3px);
         }
+      }
+      svg {
+        position: relative;
+        top: 1px;
+        margin-right: 5px;
       }
     }
   }
