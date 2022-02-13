@@ -146,7 +146,8 @@
     }
 
     .transcript {
-      
+      display: flex;
+      flex-wrap: wrap;
       a,
       a:visited {
         display: inline;
