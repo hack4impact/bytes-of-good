@@ -4,19 +4,39 @@ include ../../vectors.pug
   section#team
     hgroup
       h2 Our Team
-      h3 Meet the star-studded cast
+      h3 Meet the cast :)
 
     .team-members
       each member in teamMembers
-        .member
-          .member-img
-            .img-wrapper
-              img(src=member.image.url alt=member.name height="250" width="250")
-            h3 #{member.name} 
-          p.description #{member.jobTitle}
-          if member.twitter
-            a.social-link(href=member.twitter target="_blank" rel="noreferrer" aria-label="Twitter")
-              +icon("twitter")
-          if member.linkedIn
-            a.social-link(href=member.linkedIn target="_blank" rel="noreferrer" aria-label="LinkedIn")
-              +icon("linkedin")
+        if (member.active)
+          .member
+            .member-img
+              .img-wrapper
+                img(src=member.image.url alt=member.name height="250" width="250")
+              h3 #{member.name} 
+            p.description #{member.jobTitle}
+            if member.twitter
+              a.social-link(href=member.twitter target="_blank" rel="noreferrer" aria-label="Twitter")
+                +icon("twitter")
+            if member.linkedIn
+              a.social-link(href=member.linkedIn target="_blank" rel="noreferrer" aria-label="LinkedIn")
+                +icon("linkedin")
+
+    hgroup
+      h3 The oldies 👴
+    
+    .team-members
+      each member in teamMembers
+        if (!member.active)
+          .member
+            .member-img
+              .img-wrapper
+                img(src=member.image.url alt=member.name height="250" width="250")
+              h3 #{member.name} 
+            p.description #{member.jobTitle}
+            if member.twitter
+              a.social-link(href=member.twitter target="_blank" rel="noreferrer" aria-label="Twitter")
+                +icon("twitter")
+            if member.linkedIn
+              a.social-link(href=member.linkedIn target="_blank" rel="noreferrer" aria-label="LinkedIn")
+                +icon("linkedin")
