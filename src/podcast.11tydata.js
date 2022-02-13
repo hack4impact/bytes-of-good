@@ -9,6 +9,7 @@ module.exports = async function episodes() {
         description {
           json
         }
+        transcriptLink
         publishedOn
         listenLink
         guestsCollection(limit: 10) {

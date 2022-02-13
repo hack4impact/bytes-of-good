@@ -1,4 +1,4 @@
-@import '_imports/variables.scss';
+@import "_imports/variables.scss";
 
 .heading,
 .episode-card {
@@ -88,7 +88,7 @@
       }
       // the purple stripe on the top-right of every podcast episode
       a::before {
-        content: '';
+        content: "";
         background: linear-gradient(45deg, white 50%, $purple 50%);
         position: absolute;
         width: 70px;
@@ -98,7 +98,7 @@
       }
       // the "play" button icon in the top-right
       a::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 10px;
         right: 10px;
@@ -141,6 +141,32 @@
         img {
           margin-right: 10px;
           border-radius: 100%;
+        }
+      }
+    }
+
+    .transcript {
+      display: flex;
+      flex-wrap: wrap;
+      a,
+      a:visited {
+        display: inline;
+        background: #efefef;
+        border-radius: 30px;
+        font-size: 14px;
+        color: $black;
+        padding: 10px 15px 10px 15px;
+        // padding-right: 16px;
+        display: flex;
+        align-items: center;
+        transition: box-shadow 0.1s, transform 0.2s;
+        text-decoration: none;
+        font-family: $header-font;
+        margin-right: 8px;
+
+        &:hover {
+          box-shadow: 0 5px 10px #ccc;
+          transform: translateY(-3px);
         }
       }
     }
