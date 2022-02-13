@@ -5,7 +5,7 @@ mixin episode(publishedOn, listenLink, title, description, guests, transcriptLin
         a(href=listenLink target="_blank" rel="noreferrer") #{title}
       if(transcriptLink)
         .transcript
-          a(href=transcriptLink)
+          a(href=transcriptLink target="_blank")
             span Transcript
       block
       | !{description}
