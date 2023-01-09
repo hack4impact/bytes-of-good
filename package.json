@@ -4,7 +4,7 @@
   "description": "Static site for Bytes of Good marketing + browsing archives",
   "main": ".eleventy.js",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^1.0.2",
     "eleventy-plugin-sass": "^1.1.1",
     "jstransformer-markdown-it": "^2.1.0"
   },
